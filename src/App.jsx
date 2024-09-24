@@ -1,33 +1,27 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Logo from './assets/Logo.png'
+import WriteBar from './components/writeBar'
+import TasksInfo from './components/tasksInfo'
+import Card from './components/Cards'
+import './styles/App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [cards, setCards] = useState([]);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <header id='cabecalho'>
+        <img src={Logo} />
+        <WriteBar cards={cards} setCards={setCards}/>
+      </header>
+      <section id='listArea'>
+        <TasksInfo cards={cards}/>
+        <ul id='todo-list'>
+          {cards.map((card)=>(
+            <Card card={card} setCards={setCards} array={cards} />
+          ))}
+        </ul>
+      </section>
     </>
   )
 }
