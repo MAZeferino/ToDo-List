@@ -1,0 +1,31 @@
+#divAddTask{
+    width: 40%;
+    position: absolute;
+    top: 88%;
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1%;
+  }
+  #inputAddTask{
+    width: 100%;
+    height: 100%;
+    background-color: #262626;
+    color: #F2F2F2;
+    border-radius: 12px;
+    padding: 0 20px;
+    border: none;
+  }
+  #btnAddTask{
+    background-color: #1E6F9F;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    color: #F2F2F2;
+  }
+  #plusIcon{
+    width: 35%;
+  }
