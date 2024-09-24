@@ -1,0 +1,29 @@
+#infoLine{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: auto;
+    margin: 0 29%;
+  }
+  #infoLine p{
+    width: 150px;
+  }
+  #createdTasks{
+    color: #4EA8DE;
+    float: left;
+  } 
+  #finishedTasks{
+    color: #8284FA;
+    float: right;
+  }
+  .numberField{
+    background-color: #333333;
+    color: #D9D9D9;
+    padding: 3%;
+    border-radius: 20px;
+  }
+  
